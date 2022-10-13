@@ -1,0 +1,16 @@
+{
+  "name": "jiagou1.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jiagou1/jiagou1.github.io.git",
+  "author": "jiagou1 <yxpjx@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  },
+  "scripts": {
+    "docs:dev":"vuepress dev docs",
+    "docs:build":"vuepress build docs"
+
+  }
+}
