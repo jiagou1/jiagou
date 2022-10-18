@@ -1,46 +1,35 @@
 module.exports = {
-   title: 'Hello VuePress',
-   description: 'Just playing around',
-   themeConfig: {
+  base:'/jiagou1/',
+  title:'架构学习',
+  themeConfig: {
       nav: [
-          { text: '主页', link: '/' },
+          { text: '首页', link: '/' },
           {
-              text: '知识库',
+              text: 'Nonoas 博客',
               items: [
-                  { text: 'FAQ', link: '/KnowledgeBase/FAQ/1.AWTK' },
-                  { text: 'HowTo', link: '/KnowledgeBase/HowTo/api_doc' }
+                  { text: 'Github', link: 'https://github.com/Nonoas' },
+                  { text: 'CSDN', link: 'https://blog.csdn.net/weixin_44155115' }
               ]
-          },
-          {
-              text: '了解更多',
-              items: [
-                  { text: 'AWTK 官网', link: 'https://www.zlg.cn/index/pub/awtk.html' },
-                  { text: 'AWTK 云平台', link: 'https://awtk.zlg.cn/' },
-                  { text: 'GitHub 仓库', link: 'https://github.com/zlgopen/awtk' },
-                  { text: 'Gitee 仓库', link: 'https://gitee.com/zlgopen/awtk' }
-                 
-              ]
-          }
-      ],
+          }],
+      // 侧边栏配置
       sidebar: [
-         {
-            title: 'Group 1',   // 必要的
-            path: '/foo/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-            collapsable: true, // 可选的, 默认值是 true,
-            sidebarDepth: -1,    // 可选的, 默认值是 1
-            children: [
-              '/ffff',
-              '/page-a',
-              ['/page-b', 'Explicit link text']
-            ]
+          {
+              title: '导航栏',
+              path: '/',
+              collapsable: false, // 不折叠
+              children: [
+                  { title: "学前必读", path: "/" }
+              ]
           },
           {
-            title: 'Group 2',
-            children: [ /* ... */ ],
-            initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+              title: "文章导航",
+              path: '/note/javaPlugin', // 默认激活的选项
+              collapsable: false, // 不折叠
+              children: [
+                  { title: "java插件开发", path: "/note/javaPlugin" },
+                  { title: "nvm安装教程", path: "/note/nvmInstall" }
+              ],
           }
-        ]
-        }
-
+      ]
   }
-
+}
